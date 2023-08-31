@@ -1,0 +1,68 @@
+   #include <stdio.h>
+   
+   
+    int multiplicacion(int a, int b) {
+    	int result = 0;
+
+    	while (a > 0) {
+        	if (a % 2 == 1) {
+           	 result += b;
+       	 }
+       	 a /= 2;
+       	 b *= 2;
+    }
+
+    return result;
+}
+
+
+int conjetura(){
+	
+	int iteraciones=0;
+   	int numero;
+   	printf("Numero inicial: ");
+   	scanf("%d", &numero);
+   	 while (numero != 1)
+	{
+		if (numero % 2 == 0)
+		{
+			numero = numero / 2;
+		}
+		else
+		{
+			numero = (3 * numero) + 1;
+		}
+		printf("%d,", numero);
+		iteraciones++;
+	}
+	printf("\n\nNumero de iteraciones %d ", iteraciones);
+	
+	
+}
+   int main(){
+   	
+   	
+   	printf("Conjetura de collatz: \n\n");
+   	
+	conjetura();
+	
+	printf("\n\nMultiplicacion egipcia: \n\n");
+	
+	int num1, num2;
+
+    printf("Numero 1: ");
+    scanf("%d", &num1);
+
+    printf("Numero 2: ");
+    scanf("%d", &num2);
+
+    int producto =multiplicacion(num1, num2);
+
+    printf("El producto de %d y %d es: %d\n", num1, num2, producto);
+
+    return 0;
+	
+	
+   }
+   
+   
